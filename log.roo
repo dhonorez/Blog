@@ -1,0 +1,16 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-05-27 17:35:16
+project --topLevelPackage be.axxes --projectName Blog --java 6 --packaging WAR
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-05-27 17:35:25
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-05-27 17:35:28
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class be.axxes.BlogPost
+field date --fieldName created --type java.util.Date
+field string --fieldName author
+field string --fieldName contents
+web mvc setup
+web mvc scaffold --class ~.BlogPost
+web mvc scaffold --backingType ~.BlogPost --class be.axxes.BlogController
+perform eclipse
+test stub 
+test integration 
+perform test
